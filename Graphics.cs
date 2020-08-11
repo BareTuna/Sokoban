@@ -20,9 +20,9 @@ namespace Sokoban
                     {
                         default: Console.CursorLeft += 2; break;
                         case 1: Console.Write("██"); break;
-                        case 2: Console.Write("B "); break;
-                        case 3: Console.Write("G "); break;
-                        case 4: Console.Write("P "); break;
+                        case 2: Console.Write("░░"); break;
+                        case 3: Console.Write("[]"); break;
+                        case 4: Console.Write("☺ "); break;
                     }
                 }
                 Console.WriteLine();
