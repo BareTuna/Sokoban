@@ -13,6 +13,7 @@ namespace Sokoban
             // please git this message.
             // *get
             // whoops my bad. hopefully this written apology will make up for my horrid, nasty typo.
+            // lol doesn't
             int[,] test = new int[,]
             {
                 { 1, 1, 1, 1 },
