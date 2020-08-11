@@ -11,6 +11,7 @@ namespace Sokoban
         static void Main(string[] args)
         {
             // please git this message.
+            // *get
             int[,] test = new int[,]
             {
                 { 1, 1, 1, 1 },
