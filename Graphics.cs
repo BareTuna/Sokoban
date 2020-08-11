@@ -19,7 +19,7 @@ namespace Sokoban
                     switch (data[i,j])
                     {
                         default: Console.CursorLeft += 2; break;
-                        case 1: Console.Write("W "); break;
+                        case 1: Console.Write("██"); break;
                         case 2: Console.Write("B "); break;
                         case 3: Console.Write("G "); break;
                         case 4: Console.Write("P "); break;
