@@ -1,0 +1,6 @@
+C:\Users\Family\Desktop\VS Projects\Sokoban\bin\Debug\Sokoban.exe.config
+C:\Users\Family\Desktop\VS Projects\Sokoban\bin\Debug\Sokoban.exe
+C:\Users\Family\Desktop\VS Projects\Sokoban\bin\Debug\Sokoban.pdb
+C:\Users\Family\Desktop\VS Projects\Sokoban\obj\Debug\Sokoban.csprojAssemblyReference.cache
+C:\Users\Family\Desktop\VS Projects\Sokoban\obj\Debug\Sokoban.exe
+C:\Users\Family\Desktop\VS Projects\Sokoban\obj\Debug\Sokoban.pdb
