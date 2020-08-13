@@ -10,7 +10,7 @@ namespace Sokoban
 {
     class Graphics
     {
-        public void Display(int[,] data)
+        public void Display(GameElement[,] data)
         {
             for (int i = 0; i < data.GetLength(0); i++)
             {
@@ -19,10 +19,10 @@ namespace Sokoban
                     switch (data[i,j])
                     {
                         default: Console.CursorLeft += 2; break;
-                        case 1: Console.Write("W "); break;
-                        case 2: Console.Write("B "); break;
-                        case 3: Console.Write("G "); break;
-                        case 4: Console.Write("P "); break;
+                        case GameElement.Wall:      Console.Write("██"); break;
+                        case GameElement.Box:       Console.Write("[]"); break;
+                        case GameElement.Goal:      Console.Write("▒▒"); break;
+                        case GameElement.Player:    Console.Write("☺ "); break;
                     }
                 }
                 Console.WriteLine();

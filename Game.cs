@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,9 +16,15 @@ namespace Sokoban
         Player = 4
     }
 
-    class Structure
+    class Game
     {
-        public static GameElement[,] Gameboard;
+        public static Gameboard CurrentGameboard;
+
+        public static void Play()
+        {
+            Graphics graphics = new Graphics();
+            
+        }
 
     }
 }
