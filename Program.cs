@@ -45,14 +45,14 @@ namespace Sokoban
                 }
             }
 
-            Graphics graphics = new Graphics();
-            graphics.Display(test);
+            Game.CurrentGameboard = new Gameboard(test);
 
 #endif
 
-            Game.Play();
+            Game.Run();
 
-            Console.ReadKey(true);
+            //Console.Write("Press any key to exit . . . ");
+            //Console.ReadKey(true);
         }
     }
 }

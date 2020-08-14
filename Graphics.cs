@@ -10,13 +10,18 @@ namespace Sokoban
 {
     class Graphics
     {
-        public void Display(GameElement[,] data)
+        public void Display(Gameboard data)
         {
-            for (int i = 0; i < data.GetLength(0); i++)
+            // Get data from gameboard.
+            GameElement[,] d = data.Data;
+
+            // Loop through each item
+            for (int i = 0; i < d.GetLength(0); i++)
             {
-                for (int j = 0; j < data.GetLength(1); j++)
+                for (int j = 0; j < d.GetLength(1); j++)
                 {
-                    switch (data[i,j])
+                    // Display the item.
+                    switch (d[i,j])
                     {
                         default: Console.CursorLeft += 2; break;
                         case GameElement.Wall:      Console.Write("██"); break;

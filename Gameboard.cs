@@ -26,8 +26,9 @@ namespace Sokoban
         /// <param name="boxes">How many boxes (and goals) will be in the Gameboard.</param>
         public Gameboard (int width, int height, int boxes)
         {
-            throw new NotImplementedException("Does not guarantee the parameters and player to be correctly placed (see the GitHub page).");
-            /*
+            
+            //throw new NotImplementedException("Does not guarantee the parameters and player to be correctly placed (see the GitHub page).");
+            //*
             if (width < 3 || height < 3)
                 throw new Exception("Game board width or height is too small to be playable!");
 
