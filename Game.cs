@@ -32,15 +32,18 @@ namespace Sokoban
             }
             set
             {
+                // (e.g.) If at top of selection, and press up, it moves to the bottom of the selection
                 _menuSelection = Wrap(value, MenuOptions.Count);
             }
         }
 
-        //private static string[] MenuOptions = new string[] { "Test Mode", "Story Mode", "Endless Mode", "Leaderboard", "Quit" };
         private static Dictionary<string, Action> MenuOptions;
+
+
 
         private static void Init()
         {
+            // Create Menu Options
             MenuOptions = new Dictionary<string, Action>
             {
                 { "Test Mode", () => { State = TestMode; } },
@@ -74,6 +77,7 @@ namespace Sokoban
             Console.CursorTop = MenuSelection;
             Console.Write(">");
             Console.CursorTop = MenuOptions.Count + 1;
+            Console.WriteLine("(You can also type 'Q' to quit.)");
 
             // Update input
             switch (Console.ReadKey(true).Key)
@@ -94,6 +98,32 @@ namespace Sokoban
                     MenuOptions.ElementAt(MenuSelection).Value.Invoke();
                     break;
 
+                #region // Shortcuts //
+
+                // Quit
+                case ConsoleKey.Q:
+                    goto case ConsoleKey.Escape;
+
+                case ConsoleKey.Escape:
+                    MenuOptions["Quit"].Invoke();
+                    break;
+
+                // Test mode
+                case ConsoleKey.T:
+                    MenuOptions["Test Mode"].Invoke();
+                    break;
+
+                // Endless Mode (When implemented)
+                case ConsoleKey.E:
+                    // Menu Options["Endless Mode"].Invoke();
+                    break;
+
+                // Story Mode (When implemented)
+                case ConsoleKey.S:
+                    // Menu Options["Story Mode"].Invoke();
+                    break;
+                    
+                #endregion // Shortcuts to quit or play //
             }
 
         }
@@ -125,6 +155,7 @@ namespace Sokoban
                 case ConsoleKey.LeftArrow: Console.WriteLine("←"); break;
                 case ConsoleKey.RightArrow: Console.WriteLine("→"); break;
                 case ConsoleKey.Q: State = Menu; break;
+                case ConsoleKey.Escape: State = Menu; Running = false; return; 
             }
             
         }
